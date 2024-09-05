@@ -11,7 +11,7 @@ formEl.addEventListener('submit', (event) => {
   } else if (weight === '' || weight < 0 || isNaN(weight)) {
     result.innerHTML = 'Provide a non-zero & +ve Weight value';
   } else {
-    let bmi = (weight / height ** 2 / 10000).toFixed(2);
+    let bmi =  (weight/( (height**2)/10000 )).toFixed(2);
 
     // dsiply BMI in result
     result.innerHTML = `<span> ${bmi} </span>`;
